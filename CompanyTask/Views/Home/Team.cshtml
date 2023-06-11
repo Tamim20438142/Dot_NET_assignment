@@ -1,0 +1,45 @@
+﻿<main>
+
+
+    <div>
+        <h2>Teams In Our Company</h2> <br />
+
+        
+        @foreach (var item in Model)
+        {
+            <div class="card">
+                
+                <div class="card-body">
+
+                    <h5 class="card-title">@item.Name</h5>
+                    <p class="card-text">
+                        <ol>
+                            @foreach (var MEMBERS in item.Memberss)
+                            {
+                                <li>
+                                    <ul>
+                                        <li>
+                                            Name: @MEMBERS.Name
+                                        </li>
+                                        <li>
+                                            Phone: @MEMBERS.Phone
+                                        </li>
+                                    </ul>
+                                </li>
+                            }
+                        </ol>
+
+                    </p>
+                   
+
+                </div>
+            </div>
+        }
+
+        
+
+
+    </div>
+
+
+</main>
